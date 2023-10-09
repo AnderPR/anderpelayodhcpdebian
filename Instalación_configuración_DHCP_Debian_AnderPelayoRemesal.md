@@ -7,7 +7,8 @@ Se realizara el ejemplo y la explicacion junto.
 [Configuración de red del equipo](#2--configuración-de-red-del-equipo)  
 [Instalación del servidor](#3--instalación-del-servidor)  
 [Configuracion del servidor](#4--configuracion-del-servidor)  
-[Comprobacion con el cliente](#5--comprobacion-con-el-cliente)  
+[Comprobacion con el cliente](#5--comprobacion-con-el-cliente)   
+[Archivos LOG](#6--archivos-log) 
 
 ### 1- Introducción
 En este tutorial vamos a crear un servidor DHCP desde un equipo Debian. Para este usaremos el servicio `isc-dhcp-server`. A continuacion podremos ver un pequeño diagrama el cual indica como va a estar planteada nuestra red.   
@@ -97,3 +98,12 @@ Y para ver la ip en el servidor tendremos que poner el siguiente comando.
 Veremos a continuacion el resultado que nos da.
 
 ![Imagen conf interfaz](img/ipw10.JPG)
+
+### 6- Archivos LOG
+Por si tenemos algun error y no nos activa el servicio tendremos la opcion de ver los archivos LOG, los cuales nos indican donde tenemos el fallo, para eso tendremos que ejercutar el comando 
+
+    journalctl -u isc-dhcp-server.service
+
+A continuacion veremos un ejemplo de lo que nos muestra este comando   
+
+![Imagen conf interfaz](img/log.JPG)
